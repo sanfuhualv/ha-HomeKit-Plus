@@ -1,0 +1,32 @@
+{
+  "domain": "homekit_plus",
+  "name": "HomeKit Plus",
+  "after_dependencies": [
+    "camera",
+    "zeroconf"
+  ],
+  "codeowners": [
+    "@sanfuhualv"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "ffmpeg",
+    "http",
+    "network"
+  ],
+  "documentation": "https://github.com/sanfuhualv/ha-HomeKit-Plus",
+  "iot_class": "local_push",
+  "loggers": [
+    "pyhap"
+  ],
+  "requirements": [
+    "HAP-python==5.0.0",
+    "fnv-hash-fast==2.0.3",
+    "homekit-audio-proxy==1.2.1",
+    "PyQRCode==1.2.1",
+    "base36==0.1.1"
+  ],
+  "version": "2026.10.0.4",
+  "integration_type": "hub",
+  "issue_tracker": "https://github.com/sanfuhualv/ha-HomeKit-Plus/issues"
+}

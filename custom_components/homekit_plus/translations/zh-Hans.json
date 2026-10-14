@@ -1,0 +1,101 @@
+{
+  "config": {
+    "abort": {
+      "port_name_in_use": "已配置过具有相同名称或端口的桥接器。",
+      "entity_not_found": "选择的实体已不可用。",
+      "reconfigure_successful": "桥接设备选择已保存。",
+      "yaml_managed": "此桥接由 YAML 管理，请在 configuration.yaml 中修改实体筛选。"
+    },
+    "step": {
+      "pairing": {
+        "title": "创建 HomeKit Plus",
+        "description": "提交以创建 {name}，然后在通知中的“HomeKit Plus Pairing”获取配对二维码。需要配件模式的实体会分别生成配对通知。"
+      },
+      "user": {
+        "title": "选择 HomeKit Plus 实体",
+        "description": "输入实体名称或实体 ID 搜索，然后逐个添加要同步到苹果“家庭”的实体。仅同步选中的实体，清空列表则不同步任何实体。需要配件模式的摄像头、锁、电视和活动遥控器会生成单独的配对条目。",
+        "data": {
+          "entities": "要同步的实体"
+        }
+      },
+      "reconfigure": {
+        "title": "管理桥接设备",
+        "description": "这里管理当前桥接中已选的实体。点击已选项旁的 × 可移除；搜索并选择其他实体可添加。提交后更新当前桥接，无需删除或重新创建中枢。",
+        "data": {
+          "entities": "同步到家庭的实体"
+        }
+      }
+    },
+    "error": {
+      "invalid_entities": "所选实体不可用或不受支持。",
+      "one_entity_required": "独立配件模式必须选择一个实体。"
+    }
+  },
+  "options": {
+    "step": {
+      "cameras": {
+        "data": {
+          "camera_audio": "支持音频的摄像头",
+          "camera_copy": "支持原生 H.264 推流的摄像头"
+        },
+        "description": "查找所有支持原生 H.264 推流的摄像头。如果摄像头输出的不是 H.264 流，系统会将视频转码为 H.264 以供 HomeKit 使用。转码需要高性能的 CPU ，因此在开发板计算机上很难完成。",
+        "title": "摄像头配置"
+      },
+      "init": {
+        "title": "管理桥接设备",
+        "description": "这里管理当前桥接中已选的实体。点击已选项旁的 × 可移除；搜索并选择其他实体可添加。提交后更新当前桥接，无需删除或重新创建中枢。",
+        "data": {
+          "entities": "同步到家庭的实体"
+        }
+      },
+      "yaml": {
+        "description": "该条目是通过 YAML 控制的",
+        "title": "HomeKit Plus 选项"
+      },
+      "climate": {
+        "title": "空调与温控实体设置",
+        "description": "选择每个空调或温控实体在苹果“家庭”中的显示方式。“加热器/冷却器”可将受支持的温度、风速和摆风控制放在同一张卡片中；“恒温器”使用温度旋钮。“自动”沿用当前方式或自动选择。更改方式会保留名称和房间，但相关苹果家庭自动化可能需要重新配置。"
+      }
+    },
+    "error": {
+      "invalid_entities": "请选择当前可用且受支持的实体。",
+      "one_entity_required": "此配件必须且只能选择一个实体。"
+    }
+  },
+  "selector": {
+    "climate_accessory_type": {
+      "options": {
+        "automatic": "自动",
+        "heater_cooler": "加热器/冷却器",
+        "thermostat": "恒温器"
+      }
+    }
+  },
+  "services": {
+    "reload": {
+      "description": "重新加载 HomeKit Plus 及其 YAML 配置。",
+      "name": "重新加载"
+    },
+    "reset_accessory": {
+      "description": "重置 HomeKit 配件。",
+      "fields": {
+        "entity_id": {
+          "description": "要重置的实体。",
+          "name": "实体"
+        }
+      },
+      "name": "重置配件"
+    },
+    "unpair": {
+      "description": "强制移除配件的所有配对，以便重新配对。如果配件不再响应，并且您不想删除并重新添加条目，请使用此操作。房间位置和配件偏好设置将会丢失。",
+      "fields": {
+        "device_id": {
+          "description": "要取消配对的设备。",
+          "name": "设备"
+        }
+      },
+      "name": "取消配对配件或桥接器"
+    }
+  },
+  "title": "HomeKit Plus"
+}
