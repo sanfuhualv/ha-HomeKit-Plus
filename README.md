@@ -25,13 +25,6 @@ Home Assistant 的 HomeKit Bridge 分支版本。官方桥接只能按类别批�
 
 这只会改变同步哪些实体，不会删除 Home Assistant 中的设备或实体。由 `configuration.yaml` 创建的桥接仍需在那里修改 `filter`；摄像头和空调的额外设置走原有的「配置」流程。
 
-## 打包
-
-```
-python scripts/package.py            # 安装包
-python scripts/package.py --source   # GitHub 源码包
-```
-
 ## 许可
 
 基于 [Home Assistant Core 的 HomeKit Bridge](https://github.com/home-assistant/core/tree/2026.10.1/homeassistant/components/homekit)，Apache-2.0，见 `LICENSE.md` 与 `NOTICE`。图标来自 [Home Assistant brands](https://github.com/home-assistant/brands)。
